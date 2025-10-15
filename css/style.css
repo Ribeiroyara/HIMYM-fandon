@@ -1,0 +1,400 @@
+/* === BASE GERAL === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-yellow: #ffcc00;
+  --dark-bg: #222;
+  --light-bg: #f9f9f9;
+  --text-color: #333;
+  --radius: 0.625rem;
+  --shadow: 0 0.2rem 0.8rem rgba(0, 0, 0, 0.2);
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: var(--light-bg);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* === CONTAINER PRINCIPAL === */
+.container {
+  max-width: 90vw;
+  margin: 0 auto;
+  padding: 5vh 0;
+}
+
+/* === HEADER === */
+header {
+  background-color: var(--dark-bg);
+  color: var(--main-yellow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 1rem;
+  box-shadow: var(--shadow);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.logo-img img {
+  width: 5rem; /* 🔹 logo menor */
+  height: auto;
+  border-radius: var(--radius);
+  box-shadow: 0 0 0.8rem rgba(255, 204, 0, 0.4);
+}
+
+.small {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--main-yellow);
+  letter-spacing: 0.05em;
+}
+
+/* === NAV BAR === */
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+nav a {
+  color: var(--main-yellow);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+/* === CONTEÚDO PRINCIPAL === */
+main {
+  max-width: 60rem;
+  margin: 2rem auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* === TÍTULOS === */
+h2, h3 {
+  color: var(--dark-bg);
+}
+
+h2 {
+  border-bottom: 0.3rem solid var(--main-yellow);
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding-bottom: 0.3rem;
+}
+
+/* === TEXTO E LISTAS === */
+p {
+  margin-bottom: 1rem;
+}
+
+ul {
+  list-style-type: square;
+  margin-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* === CARROSSEL === */
+.carousel-container {
+  position: relative;
+  max-width: 100%;
+  margin: 2rem auto;
+  overflow: hidden;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+
+.carousel-track img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.carousel-controls button {
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.3em 0.8em;
+  border-radius: var(--radius);
+  transition: 0.3s;
+}
+
+.carousel-controls button:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* === CARDS === */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: #fff8e1;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.2rem;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.card img {
+  width: 100%;
+  border-radius: var(--radius);
+  margin-bottom: 0.5rem;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+/* === LISTAS DE EPISÓDIOS === */
+.episode-list {
+  margin-bottom: 2rem;
+}
+
+.episode-list h3 {
+  color: var(--dark-bg);
+  margin-bottom: 0.5rem;
+}
+
+/* === SEÇÕES DE TEMPORADAS === */
+.season-content {
+  margin-top: 5vh;
+}
+
+.season-content h2 {
+  text-align: center;
+  color: #c96406;
+  font-size: 2.4rem;
+  margin-bottom: 4vh;
+}
+
+.season {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4vw;
+  margin-bottom: 8vh;
+  flex-wrap: wrap;
+  background-color: #e0f7f4;
+  padding: 3vh 3vw;
+  border-radius: 2rem;
+  box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.1);
+}
+
+.season-img {
+  flex: 1 1 35%;
+  display: flex;
+  justify-content: center;
+}
+
+.season-img img {
+  width: 100%;
+  max-width: 25rem;
+  border-radius: 1.5rem;
+  object-fit: cover;
+}
+
+.season-txt {
+  flex: 1 1 55%;
+}
+
+.season-txt h3 {
+  color: #ec7b0a;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.season-txt p {
+  color: #333;
+  font-size: 1.6rem;
+  text-align: justify;
+}
+
+/* === BOTÕES === */
+button, .btn {
+  background-color: var(--main-yellow);
+  border: none;
+  color: var(--dark-bg);
+  padding: 0.8rem 1.2rem;
+  border-radius: var(--radius);
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover, .btn:hover {
+  background-color: #e0b800;
+}
+
+/* === FORMULÁRIO DE CONTATO === */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+input, textarea {
+  padding: 0.8rem;
+  border-radius: var(--radius);
+  border: 0.1rem solid #ccc;
+  font-family: inherit;
+  width: 100%;
+}
+
+input:focus, textarea:focus {
+  border-color: var(--main-yellow);
+  outline: none;
+}
+
+/* === FUN FACTS === */
+#fun-facts {
+  background-color: #f7f7f7;
+  padding: 2rem;
+  border-radius: 1rem;
+  margin: 2rem 0;
+}
+
+#fun-facts h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #ec7b0a;
+  text-align: center;
+}
+
+#fun-facts ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 1.5rem;
+}
+
+#fun-facts li {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1.2rem;
+  box-shadow: 0 0.4rem 0.8rem rgba(0,0,0,0.1);
+  font-size: 1rem;
+  line-height: 1.5;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#fun-facts li:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 0.6rem 1rem rgba(0,0,0,0.15);
+}
+
+#fun-facts li::before {
+  content: "💡";
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+/* === CTA IMAGE === */
+.cta-img img {
+  width: 100%;
+  max-width: 40rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+  display: block;
+  margin: 1.5rem auto;
+  object-fit: cover;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.cta-img img:hover {
+  transform: scale(1.03);
+  filter: brightness(1.05);
+}
+
+/* === FOOTER === */
+footer {
+  background-color: var(--dark-bg);
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+}
+
+/* === RESPONSIVIDADE === */
+@media (max-width: 48rem) {
+  main {
+    padding: 1.2rem;
+  }
+
+  .brand {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .logo-img img {
+    width: 4rem;
+  }
+
+  nav {
+    gap: 0.5rem;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+  }
+
+  .season-txt p {
+    font-size: 1.4rem;
+  }
+
+  .season-txt h3 {
+    font-size: 1.6rem;
+  }
+
+  #fun-facts li {
+    font-size: 0.95rem;
+  }
+}
